@@ -1,24 +1,29 @@
 /* navbar styles */
+
 .navbar {
     border-bottom: 2px solid #008ed6;
     background-color: rgba(0,0,0, .5);
 }
+
 .navbar a {
     color: #fff;
 }
 
-/* Header styles */
+.navbar a:hover {
+    color: #008ed6;
+}
 
+/* header styles */
 header {
     position: relative;
     background-color: black;
-    height: 75vh;
+    height: 100vh;
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
-  }
+}
   
-  header video {
+header video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -31,14 +36,14 @@ header {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-  }
+}
   
-  header .container {
+header .container {
     position: relative;
     z-index: 2;
-  }
+}
   
-  header .overlay {
+header .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,18 +52,43 @@ header {
     background-color: black;
     opacity: 0.5;
     z-index: 1;
-  }
+}
+
+h1 {
+    font-family: 'Open Sans Pro', sans-serif;
+}
+
+/* accomodation styles */
+
+#accomodation {
+    height: 100vh;
+}
+
+/* services section styles */
+#services {
+    height: 100vh;
+}
+
+.services-image {
+    clip-path: ellipse();
+}
+
+
+/* contact section styles */
+#contact {
+    height: 100vh;
+}
+
+/* Media Query */
   
-  /* Media Query for devices withi coarse pointers and no hover functionality */
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
   
-  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-  
-  @media (pointer: coarse) and (hover: none) {
+@media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+      background: url('/media/video/mobile/mobile-home-page.jpg') black no-repeat center center scroll;
     }
   
     header video {
       display: none;
     }
-  }
+}
