@@ -12,5 +12,16 @@
 .navbar a:hover {
     color: #008ed6;
 }
+/* accomodation styles */
+#accomodation {
+    height: 50vh;
+}
 
-/*  */
+
+/*  services styles */
+#services {
+    height: 70vh;
+}
+.services-image {
+    clip-path: ellipse();
+}
