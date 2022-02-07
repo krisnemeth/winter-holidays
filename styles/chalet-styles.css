@@ -7,7 +7,7 @@
 
 /* accomodation styles */
 #accomodation {
-    height: 60vh;
+    height: 55vh;
 }
 
 /*  services styles */
@@ -16,4 +16,28 @@
 }
 .services-image {
     clip-path: ellipse();
+}
+
+@media screen and (min-width: 1024px) {
+    /* accomodation styles */
+    #accomodation {
+        height: 70vh;
+    }
+
+    /*  services styles */
+    #services {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /* accomodation styles */
+    #accomodation {
+        height: 55vh;
+    }
+
+    /*  services styles */
+    #services {
+        height: 50vh;
+    }
 }
