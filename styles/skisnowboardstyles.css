@@ -1,0 +1,40 @@
+.navbar {
+    border-bottom: 2px solid #008ed6;
+    background-color: rgba(0,0,0, .5);
+}
+
+h1 {
+    font-family: 'Open Sans Pro', sans-serif;
+}
+
+/* accomodation styles */
+
+#accomodation {
+    height: 100vh;
+}
+
+/* services section styles */
+#services {
+    height: 100vh;
+}
+
+.services-image {
+    clip-path: ellipse();
+}
+
+
+/* contact section styles */
+#contact {
+    height: 100vh;
+}
+
+/* footer styles */
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #008ed6;
+}

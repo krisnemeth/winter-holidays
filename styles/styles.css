@@ -71,6 +71,18 @@ h1 {
     height: 100vh;
 }
 
+/* footer styles */
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #008ed6;
+}
+
+
 
 
 /* Media Query */
