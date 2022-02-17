@@ -38,3 +38,77 @@ h1 {
 .footer-link:hover {
     color: #008ed6;
 }
+
+/* Keyframes */
+@keyframes moveInLeft {
+    /* animation starting position */
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    /* adding a bit of overhang at 80% of completion */
+    80% {
+        transform: translateX(1rem);
+    }
+    /* last stage of animation */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* animation starting position */
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    /* adding a bit of overhang at 80% of completion */
+    80% {
+        transform: translateX(-1rem);
+    }
+    /* last stage of animation */
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.header {
+    height: 95vh;
+    background-image: url(/media/skisnowboard/ski-jump.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    /* original shape */
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+
+}
+
+.header_text-box {
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-main {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: .8rem;
+    animation: moveInLeft 1s ease-out;
+}
+
+.heading-sub {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    animation: moveInRight 1s ease-out;
+}
