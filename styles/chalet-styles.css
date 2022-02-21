@@ -18,6 +18,17 @@
     clip-path: ellipse();
 }
 
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #008ed6;
+}
+
+/* Media Queries */
+
 @media (max-width: 992px) {
     #accomodation {
         height: 30vh;

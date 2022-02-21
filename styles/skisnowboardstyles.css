@@ -9,22 +9,18 @@ h1 {
 
 /* accomodation styles */
 
-#accomodation {
+#info {
     height: 100vh;
 }
 
 /* services section styles */
-#services {
+#audio {
     height: 100vh;
-}
-
-.services-image {
-    clip-path: ellipse();
 }
 
 
 /* contact section styles */
-#contact {
+#video {
     height: 100vh;
 }
 
@@ -80,11 +76,6 @@ h1 {
     background-size: cover;
     background-position: top;
     position: relative;
-
-    /* original shape */
-    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
-
 }
 
 .header_text-box {
@@ -112,3 +103,8 @@ h1 {
     letter-spacing: .5rem;
     animation: moveInRight 1s ease-out;
 }
+
+span {
+    text-shadow: 2px 1px rgba(0,0,0, .5);
+}
+
