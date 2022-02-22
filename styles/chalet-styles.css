@@ -42,7 +42,7 @@
 
 @media (max-width: 576px) {
     #accomodation {
-        height: 20vh;
+        height: 10vh;
     }
     
     /* services section styles */
@@ -51,6 +51,6 @@
     }
 
     .carousel {
-        transform: translateX(10%);
+        transform: translateX(30%);
     }
 }
