@@ -1,7 +1,8 @@
 //Step 1: initialize communication with the platform
 // Replace variable YOUR_API_KEY with your own apikey
 var platform = new H.service.Platform({
-  apikey: "i5KOpWaqt2nRJk9m0SHClw",
+  apikey:
+    "CgnEAQTK-vKM1EC8CBvDytsK7Y12hn8AjuXWP-p2ej2hxPEAemn9_D3ndWloxDDwY_04eYdchra_KlNE4KnK5w",
 });
 var defaultLayers = platform.createDefaultLayers();
 
