@@ -15,8 +15,7 @@ let icon = document.querySelector(".img-container");
 function getWeather () {
   //API call
   fetch(
-    // `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=f342a8977e982afc539caeb496c17f9e&units=metric`
-    `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=f342a8977e982afc539caeb496c17f9e&units=metric`
+    ``
   )
     .then((response) => response.json()) //returning the json feed containing the data
     .then((data) => {
