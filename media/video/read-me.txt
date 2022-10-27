@@ -1,4 +1,2 @@
-Source of the video:
-https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4
-
-Home page video
+Video: https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4
+Background image: https://source.unsplash.com/XT5OInaElMw/1600x900
