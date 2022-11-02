@@ -135,12 +135,12 @@ h1 {
 
 @media (max-width: 576px) {
     #accomodation {
-        height: 200vh;
+        height: 210vh;
     }
     
     /* services section styles */
     #services {
-        height: 100vh;
+        height: 120vh;
     }
     
     
