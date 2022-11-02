@@ -7,7 +7,7 @@
 
 /* accomodation styles */
 #weather {
-    height: 15vh;
+    height: 17vh;
 }
 #accomodation {
     height: 100vh;
@@ -35,8 +35,8 @@
 }
 
 #mapContainer {
-    height: 90vh;
-    width: 90vw;
+    height: 80vh;
+    width: 80vw;
 }
 
 /* Media Queries */

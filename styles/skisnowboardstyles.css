@@ -1,26 +1,60 @@
 .navbar {
     border-bottom: 2px solid #008ed6;
-    background-color: rgba(0,0,0, .5);
+    background-color: rgba(0, 0, 0, .5);
 }
 
 h1 {
     font-family: 'Open Sans Pro', sans-serif;
 }
 
-/* accomodation styles */
 
-#info {
+
+
+
+/* hire section styles */
+
+#hire {
     height: 100vh;
+    background-color: #e0e0e0;
+
+    /* background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+
+    background-size: cover;
+    background-position: top;
+    position: relative;
 }
 
-/* services section styles */
-#audio {
-    height: 100vh;
+
+/* HANDMADE  RESPONSIVE GRID STYLES */
+
+.cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 35px 35px 70px #bebebe,
+        -35px -35px 70px #ffffff;
+}
+
+.table-container {
+    background: #e0e0e0;
+}
+
+#numInput {
+    width: 2.5rem;
 }
 
 
-/* contact section styles */
-#video {
+/* instructor section styles */
+#instructors {
     height: 100vh;
 }
 
@@ -37,15 +71,18 @@ h1 {
 
 /* Keyframes */
 @keyframes moveInLeft {
+
     /* animation starting position */
     0% {
         opacity: 0;
         transform: translateX(-10rem);
     }
+
     /* adding a bit of overhang at 80% of completion */
     80% {
         transform: translateX(1rem);
     }
+
     /* last stage of animation */
     100% {
         opacity: 1;
@@ -54,15 +91,18 @@ h1 {
 }
 
 @keyframes moveInRight {
+
     /* animation starting position */
     0% {
         opacity: 0;
         transform: translateX(10rem);
     }
+
     /* adding a bit of overhang at 80% of completion */
     80% {
         transform: translateX(-1rem);
     }
+
     /* last stage of animation */
     100% {
         opacity: 1;
@@ -86,13 +126,20 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .heading-main {
     display: block;
     font-size: 3.5rem;
     font-weight: 400;
-    letter-spacing: .8rem;
+    letter-spacing: .7rem;
     animation: moveInLeft 1s ease-out;
 }
 
@@ -104,16 +151,8 @@ h1 {
     animation: moveInRight 1s ease-out;
 }
 
-span {
-    text-shadow: 2px 1px rgba(0,0,0, .5);
-}
-
-#audio {
-    height: 100vh;
-    background-image: url(/media/skisnowboard/snow.jpeg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
+p {
+    text-shadow: 1px 1px rgba(0, 0, 0, .4);
 }
 
 .video-container {
@@ -132,11 +171,15 @@ span {
 }
 
 
+
+
+
+
 @media (max-width: 992px) {
     #info {
         height: 200vh;
     }
-    
+
     #audio {
         height: 130vh;
     }
@@ -150,11 +193,11 @@ span {
     #info {
         height: 190vh;
     }
-    
+
     #audio {
         height: 130vh;
     }
-    
+
     #video {
         height: 140vh;
     }

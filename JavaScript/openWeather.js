@@ -8,14 +8,12 @@ let desc = document.querySelector(".desc");
 let button = document.querySelector(".submit");
 let icon = document.querySelector(".img-container");
 
-
 // getting weather
-
 
 function getWeather () {
   //API call
   fetch(
-    ``
+    `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=f342a8977e982afc539caeb496c17f9e&units=metric`
   )
     .then((response) => response.json()) //returning the json feed containing the data
     .then((data) => {
@@ -29,7 +27,8 @@ function getWeather () {
       temp.innerHTML = `${tempValue} &#8451;`;
       icon.innerHTML = `<img src=http://openweathermap.org/img/wn/${iconCode}@2x.png>`;
     })
-    .catch((err) => alert("Please enter a valid City or resort"));
+    .catch((err) => alert("Can not get current weather forecast."));
 };
 
+// on window load, run a search for current weather
 window.onload = getWeather();

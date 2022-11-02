@@ -50,6 +50,12 @@ h1 {
     font-family: 'Open Sans Pro', sans-serif;
 }
 
+/* signup styles */
+
+#signUp {
+    height: 20vh;
+}
+
 /* accomodation styles */
 
 #accomodation {
@@ -69,6 +75,17 @@ h1 {
 /* contact section styles */
 #contact {
     height: 100vh;
+}
+
+/* map section styles */
+
+#map {
+    height: 100vh;
+}
+
+#mapContainer {
+    height: 70vh;
+    width: 80vw;
 }
 
 /* footer styles */
