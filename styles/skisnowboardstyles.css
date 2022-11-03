@@ -8,18 +8,20 @@ h1 {
 }
 
 
-
+#warning-icon {
+    font-size: 1500%;
+    /* color: #008ed6; */
+    color:#fff
+    
+}
 
 
 /* hire section styles */
 
 #hire {
     height: 100vh;
-    background-color: #e0e0e0;
-
-    /* background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
-
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -36,25 +38,18 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card {
-
-    border-radius: 50px;
-    background: #e0e0e0;
-    box-shadow: 35px 35px 70px #bebebe,
-        -35px -35px 70px #ffffff;
-}
-
-.table-container {
-    background: #e0e0e0;
-}
-
-#numInput {
-    width: 2.5rem;
+.card-cont {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
 /* instructor section styles */
-#instructors {
+#book {
     height: 100vh;
 }
 

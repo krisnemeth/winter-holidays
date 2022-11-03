@@ -16,6 +16,7 @@
 
     <script defer src="./JavaScript/getDate.js"></script>
     <script defer src="./JavaScript/canvas.js"></script>
+    <script defer src="./JavaScript/calculateGear.js"></script>
 </head>
 
 <body>
@@ -31,10 +32,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#hire">Rent Your Gear</a>
+                            <a class="nav-link" href="#hire">Rental Calculator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#instructors">Instructors</a>
+                            <a class="nav-link" href="#book">Book</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Back To Top</a>
@@ -59,10 +60,9 @@
 
 
     <section id="hire">
-        <div class="container pt-5">
+        <div class="container pt-3">
             <div class="cards pt-5">
-                <div class="card">
-                    <div class="container table-container">
+                <div class="card-cont container-fluid py-4">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -95,64 +95,49 @@
                                     class="bi bi-option"></i></label>
                             <select class="form-select" id="inputGroupSelect01">
                                 <option value="1">Choose a package</option>
-                                <option value="90">Economy</option>
-                                <option value="120">Intermediate</option>
-                                <option value="145">Performance</option>
+                                <option value="Economy">Economy</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Performance">Performance</option>
                             </select>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-range"></i></span>
-                            <input type="text" class="form-control" placeholder="Duration of stay" aria-label="Username"
+                            <input id="duration" type="text" class="form-control" placeholder="Duration of stay (no. of days)" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag"></i></span>
-                            <input type="text" class="form-control" placeholder="Ski gear" aria-label="Username"
+                            <input id="skiGear" type="text" class="form-control" placeholder="Ski gear" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag-fill"></i></span>
-                            <input type="text" class="form-control" placeholder="Snowboard gear" aria-label="Username"
+                            <input id="snowGear" type="text" class="form-control" placeholder="Snowboard gear" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class="container text-center pb-3">
-                            <button type="submit" class="btn btn-info">Calculate</button>
+                            <button id="calcBtn" type="submit" class="btn btn-secondary">Calculate</button>
                         </div>
-                    </div>
                 </div>
-                <div class="card">
-                    <div class="container table-container">
-
-                    </div>
+                <div class="card-cont container-fluid py-4">
+                        <div class="container">
+                            <div id="results" class="container text-center pt-5">
+                                <h2 class="pt-2 pb-3">Select a package to get started!</h2>
+                                <p><i id="warning-icon" class="bi bi-bag-plus"></i></p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="instructors" class="bg-light">
+    <section id="book" class="bg-light">
         <div class="container py-5">
             <div class="container pt-3">
                 <h3 class="">Let these clips get you in the mood</h3>
             </div>
             <div class="container mb-5 pt-5">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5 class="py-2">Unrailistic 2</h5>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/7X2ltgAvrbA" title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <h5 class="py-2">World's First Descent of K2</h5>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/TiGkU_eXJa8" title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
