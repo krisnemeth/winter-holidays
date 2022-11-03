@@ -5,6 +5,12 @@
     background-color: rgba(0,0,0, .5);
 }
 
+#canvas {
+    /* border: 1px solid #999; */
+    margin: 0;
+    padding: 0;
+}
+
 /* header styles */
 header {
     position: relative;
