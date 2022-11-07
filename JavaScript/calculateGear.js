@@ -1,5 +1,11 @@
+//displaying username on top of booking form
+let name = localStorage.getItem('storedUserName')
+document.getElementById('bookHeader').innerHTML = `We need some of your details, ${name}`;
+
+//calculating gear based on user input, and package choices.
 document.getElementById('calcBtn').addEventListener('click', function () {
   console.log('btn clicked');
+
   // Getting user input
   let package = document.getElementById('inputGroupSelect01').value; //package
   let duration = parseInt(document.getElementById('duration').value); //number of days
@@ -22,6 +28,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
   let perfDiscount = (perfPrice * 0.1).toFixed(2); //discount
   let perfTotal = perfPrice - perfDiscount; //after discount
 
+  //based on user selection of packages, calculating with different prices, and at or above a party of 4, applying discount
   if (package === 'Economy') {
     if (
       (!package && package !== 0) ||
@@ -137,3 +144,16 @@ document.getElementById('calcBtn').addEventListener('click', function () {
             `;
   }
 });
+
+//changing content on button event
+document
+  .getElementById('bookingProcessed')
+  .addEventListener('click', function () {
+    document.getElementById('booking').innerHTML = `
+        <div class="container-fluid text-center pt-5">
+            <h2 class="pt-2 pb-3">Thank you!</h2>
+            <h3 class="pt-2 pb-3">Your booking has been confirmed!</h3>
+            <p><i id="warning-icon" class="bi bi-check2-circle"></i></p>
+        </div>
+    `;
+  });

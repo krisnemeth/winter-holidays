@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="icon" type="image/x-icon" href="./media/favicon/favicon.ico">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script defer src="./JavaScript/getDate.js"></script>
     <script defer src="./JavaScript/canvas.js"></script>
     <script defer src="./JavaScript/calculateGear.js"></script>
@@ -57,89 +59,120 @@
 
     <!-- page sections start here -->
 
-
-
     <section id="hire">
-        <div class="container pt-3">
+        <div class="container pt-4">
             <div class="cards pt-5">
                 <div class="card-cont container-fluid py-4">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Package</th>
-                                    <th scope="col">Ski, Boots & Poles</th>
-                                    <th scope="col">Snowboards & Boots</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Economy</th>
-                                    <td>£90</td>
-                                    <td>£119</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Intermediate</th>
-                                    <td>£120</td>
-                                    <td>£145</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Performance</th>
-                                    <td>£145</td>
-                                    <td>£170</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p class="text-muted">(Prices per week, per person.)</p>
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01"><i
-                                    class="bi bi-option"></i></label>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option value="1">Choose a package</option>
-                                <option value="Economy">Economy</option>
-                                <option value="Intermediate">Intermediate</option>
-                                <option value="Performance">Performance</option>
-                            </select>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-range"></i></span>
-                            <input id="duration" type="text" class="form-control" placeholder="Duration of stay (no. of days)" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag"></i></span>
-                            <input id="skiGear" type="text" class="form-control" placeholder="Ski gear" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag-fill"></i></span>
-                            <input id="snowGear" type="text" class="form-control" placeholder="Snowboard gear" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class="container text-center pb-3">
-                            <button id="calcBtn" type="submit" class="btn btn-secondary">Calculate</button>
-                        </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Package</th>
+                                <th scope="col">Ski, Boots & Poles</th>
+                                <th scope="col">Snowboards & Boots</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Economy</th>
+                                <td>£90</td>
+                                <td>£119</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Intermediate</th>
+                                <td>£120</td>
+                                <td>£145</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Performance</th>
+                                <td>£145</td>
+                                <td>£170</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-muted">(Prices per week, per person.)</p>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-option"></i></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="1">Choose a package</option>
+                            <option value="Economy">Economy</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Performance">Performance</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-range"></i></span>
+                        <input id="duration" type="text" class="form-control"
+                            placeholder="Duration of stay (no. of days)" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag"></i></span>
+                        <input id="skiGear" type="text" class="form-control" placeholder="Ski gear (no. of people)"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-flag-fill"></i></span>
+                        <input id="snowGear" type="text" class="form-control" placeholder="Snowboard gear (no. of people)"
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="container text-center pb-3">
+                        <button id="calcBtn" type="submit" class="btn btn-secondary">Calculate</button>
+                    </div>
                 </div>
                 <div class="card-cont container-fluid py-4">
-                        <div class="container">
-                            <div id="results" class="container text-center pt-5">
-                                <h2 class="pt-2 pb-3">Select a package to get started!</h2>
-                                <p><i id="warning-icon" class="bi bi-bag-plus"></i></p>
-                            </div>
+                    <div class="container">
+                        <div id="results" class="container text-center pt-5">
+                            <h2 class="pt-2 pb-3">Select a package to get started!</h2>
+                            <p><i id="warning-icon" class="bi bi-bag-plus"></i></p>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="book" class="bg-light">
-        <div class="container py-5">
-            <div class="container pt-3">
-                <h3 class="">Let these clips get you in the mood</h3>
-            </div>
-            <div class="container mb-5 pt-5">
-                
-            </div>
-        </div>
+    <section id="book">
+                <div id="booking" class="container-fluid pt-4">
+                    <div class="cards pt-5">
+                        <div class="card-cont container-fluid py-4 w-50">
+                            <div class="py-3">
+                                <h3 id="bookHeader" class="text-center"></h3>
+                                <div class="d-flex justify-content-center">
+                                    <form class="mt-3 w-100" action="form-submit.html">
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+                                            <input type="text" class="form-control" placeholder="Full Name" aria-label="Name"
+                                                aria-describedby="basic-addon1" required>
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon2">@</span>
+                                            <input type="text" class="form-control" placeholder="Email address" aria-label="Email address"
+                                                aria-describedby="basic-addon2">
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon3"><i class="bi bi-mailbox2"></i></span>
+                                            <input type="text" class="form-control" placeholder="Address" aria-label="Address"
+                                                aria-describedby="basic-addon3">
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon4"><i class="bi bi-geo-alt-fill"></i></span>
+                                            <input type="text" class="form-control" placeholder="Postcode" aria-label="Postcode"
+                                                aria-describedby="basic-addon4">
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon5"><i class="bi bi-pencil-fill"></i></span>
+                                            <textarea rows="5" class="form-control" placeholder="If you have any requests, let us know..."
+                                                aria-label="Message" aria-describedby="basic-addon5"></textarea>
+                                        </div>
+                                        <div class="container text-center pt-3">
+                                            <a id="bookingProcessed" class="btn btn-secondary">Book</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </section>
 
     <footer class="footer mt-auto py-2 bg-dark fixed-bottom">

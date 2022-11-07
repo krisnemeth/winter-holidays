@@ -15,10 +15,13 @@
     integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <script defer src="./JavaScript/openWeather.js"></script>
   <script defer src="./JavaScript/hereMaps.js"></script>
   <script defer src="./JavaScript/chaletGreeting.js"></script>
   <script defer src="./JavaScript/canvas.js"></script>
+  <script defer src="/JavaScript/getDate.js"></script>
 
   <!-- HERE JavaScript Libs & Style Sheets-->
   <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
@@ -157,9 +160,8 @@
     <div class="container pt-5" id="mapContainer"></div>
   </section>
 
-  <footer class="footer mt-auto py-2 bg-dark text-white fixed-bottom">
-    <p class="lead text-white text-center pt-2">Winter Adventures 2022 - <a class="footer-link"
-        href="./skisnowboard.html">Click here for more</a></p>
+  <footer class="footer mt-auto py-2 bg-dark fixed-bottom">
+    <p id="date"></p>
   </footer>
 </body>
 

@@ -10,9 +10,7 @@ h1 {
 
 #warning-icon {
     font-size: 1500%;
-    /* color: #008ed6; */
     color:#fff
-    
 }
 
 
@@ -21,7 +19,7 @@ h1 {
 #hire {
     height: 100vh;
     background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-image: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
     background-size: cover;
     background-position: top;
     position: relative;
@@ -48,20 +46,11 @@ h1 {
 }
 
 
-/* instructor section styles */
+/* booking section styles */
 #book {
     height: 100vh;
-}
-
-/* footer styles */
-
-.footer-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-link:hover {
-    color: #008ed6;
+    background-color: #0093E9;
+    background-image: linear-gradient(45deg, #0093E9 0%, #80D0C7 100%);
 }
 
 /* Keyframes */
@@ -147,22 +136,7 @@ h1 {
 }
 
 h4 {
-    text-shadow: 1px 1px rgba(0, 0, 0, .4);
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    text-shadow: 1px 1px rgba(0, 0, 0, .6);
 }
 
 
@@ -171,29 +145,21 @@ h4 {
 
 
 @media (max-width: 992px) {
-    #info {
-        height: 200vh;
-    }
-
-    #audio {
-        height: 130vh;
-    }
-
-    #video {
+    #hire {
         height: 170vh;
+    }
+
+    #book {
+        height: 130vh;
     }
 }
 
 @media (max-width: 576px) {
-    #info {
-        height: 190vh;
+    #hire {
+        height: 150vh;
     }
 
-    #audio {
+    #book {
         height: 130vh;
-    }
-
-    #video {
-        height: 140vh;
     }
 }
