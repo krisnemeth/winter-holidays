@@ -1,6 +1,13 @@
 //displaying username on top of booking form
-let name = localStorage.getItem('storedUserName')
-document.getElementById('bookHeader').innerHTML = `We need some of your details, ${name}`;
+if(!localStorage.getItem('storedUserName')){
+  document.getElementById(
+    'bookHeader'
+  ).innerHTML = `Please fill in your details`;
+} else {
+  let userName = localStorage.getItem('storedUserName');
+  document.getElementById('bookHeader').innerHTML = `We need some of your details, ${userName}`;
+}
+
 
 //calculating gear based on user input, and package choices.
 document.getElementById('calcBtn').addEventListener('click', function () {
@@ -44,7 +51,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
@@ -56,7 +63,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
@@ -80,7 +87,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
@@ -92,7 +99,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
@@ -116,7 +123,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
@@ -128,7 +135,7 @@ document.getElementById('calcBtn').addEventListener('click', function () {
       document.getElementById('results').innerHTML = `
             <h2 class="pb-3">Overview</h2>
             <p class="text-start">Package chosen: <strong>${package}</strong></p>
-            <p class="text-start">Duration of stay: <strong>${duration} days</strong></p>
+            <p class="text-start">Duration of stay: <strong>${duration} weeks</strong></p>
             <p class="text-start">Number of people: <strong>${people}</strong></p>
             <p class="text-start">Ski boots & poles: <strong>${ski}</strong>
             <p class="text-start">Snowboards & boots: <strong>${snow}</strong>
